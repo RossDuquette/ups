@@ -1,5 +1,7 @@
+.PHONY: build
+
 GO_BUILD=go build -buildvcs=false
-BUILD_DIR=./bin
+BUILD_DIR=./build/bin
 
 clean:
 	@rm -rf $(BUILD_DIR)

@@ -1,6 +1,9 @@
 #!/bin/bash
 
+GO_DIR="${PWD}/build/go"
+
 docker run --rm \
-    -v "$PWD":/usr/src/myapp \
+    -v "${GO_DIR}":/go \
+    -v "${PWD}":/usr/src/myapp \
     -w /usr/src/myapp \
     golang:1.25 "$@"
