@@ -12,13 +12,13 @@ format:
 	@go fmt ./...
 
 build_broker:
-	$(GO_BUILD) -o $(BUILD_DIR)/broker ./cmd/broker
+	$(GO_BUILD) -o $(BUILD_DIR)/ups_broker ./cmd/broker
 
 build_pub:
-	$(GO_BUILD) -o $(BUILD_DIR)/publisher ./cmd/publisher
+	$(GO_BUILD) -o $(BUILD_DIR)/ups_pub_cli ./cmd/publisher
 
 build_sub:
-	$(GO_BUILD) -o $(BUILD_DIR)/subscriber ./cmd/subscriber
+	$(GO_BUILD) -o $(BUILD_DIR)/ups_sub_cli ./cmd/subscriber
 
 test: format
 	go test -v ./...
